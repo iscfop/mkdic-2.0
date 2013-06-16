@@ -1,0 +1,4 @@
+mk_dfrontend:
+    resource: "@MKDfrontendBundle/Resources/config/routing.yml"
+    prefix:   /
+

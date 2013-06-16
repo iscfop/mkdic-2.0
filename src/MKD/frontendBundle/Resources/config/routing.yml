@@ -1,0 +1,7 @@
+mk_dfrontend_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: MKDfrontendBundle:Default:index }
+
+MKDfrontendHomePage:
+    pattern:  /
+    defaults: { _controller: MKDfrontendBundle:Default:inicio }

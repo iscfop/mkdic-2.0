@@ -1,0 +1,19 @@
+{# Estructura del la página de inicio #}
+{% extends 'MKDfrontendBundle:Default:index.html.twig' %}
+{% block title %}Inicio!{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+{% endblock %}
+
+        {% block wbodyTitulo %}Inicio{% endblock %}
+        
+        {% block wbodyContenido %}
+            <br><br>
+            <center>Hola mundo... :D</center>
+            <br><br>
+        {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

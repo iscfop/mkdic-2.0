@@ -1,0 +1,7 @@
+parameters:
+#    mk_dfrontend.example.class: MKD\frontendBundle\Example
+
+services:
+#    mk_dfrontend.example:
+#        class: %mk_dfrontend.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

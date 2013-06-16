@@ -1,0 +1,77 @@
+{# Estructurando nuestra plantilla principal del proyecto #}
+{% extends '::base.html.twig' %}
+{% block title %}Bienvenidos!{% endblock %}
+{% block stylesheets %}
+	{{ parent() }}
+	<link href="{{ asset('bundles/mkd/css/style.css.twig') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+{% block body %}
+	<div id="wrapper">
+		<div class="cabecera">
+			{% block whead %}
+            <img  class="contLogo" src="{{ asset('bundles/mkd/image/logo.png') }}" />
+            <div class="contLog">
+            	{% block wheadLogin %}
+                <form>               
+                    <div  class="nombreContactanosContenedor">
+                        <span class="letraContactanos">Usuario:<br></span>
+                        <input class="nombreContactanos" type=text size=20>
+                    </div>
+            
+                    <div class="telefonoContactanosContenedor">
+                        <span class="letraContactanos">Contrase&ntilde;a<br></span>
+                        <input class="NombreContactanos" type=text size=20>
+                    </div>
+  
+                    <input TYPE="submit" src="{{ asset('bundles/mkd/image/loginBotonBg.png') }}" value="   IR   " class="botonIr">
+                </form>
+                {% endblock %}
+            </div>
+
+            <div class="contMenu">
+            	{% block wheadMenu %}
+                 <ul>
+                    <li> <a href="#"> item</a></li>
+                    <li> <a href="#"> item</a></li>
+                    <li> <a href="#"> item</a></li>
+                    <li> <a href="#"> item</a></li>
+                    <li> <a href="#"> item</a></li>
+                    <li> <a href="#"> item</a></li>
+                 </ul>
+                 {% endblock %}
+            </div>
+            {% endblock %}
+        </div>
+		<br><br><br>
+    	<div class="contenido">
+    		{% block wbody %}
+            <div class="contTitulo">
+            	{% block wbodyTitulo %}
+                Bienvenidos
+                {% endblock %}
+            </div>
+            <div class="contDatos">
+            	{% block wbodyContenido %}
+                <br><br><br><br><br><br><br><br><br><br><br>
+                Hello {{ name }}!
+                <br><br><br><br><br><br><br><br><br><br><br>
+                {% endblock %}
+            </div>
+            {% endblock %}
+        </div>
+        
+        <center>
+        	<img class="imagenSombra1" src="{{ asset('bundles/mkd/image/contenidoSombra.png') }}"/>
+        </center>
+        
+    	<div class="pie">
+    		{% block wfoot %}
+            <div class="contDatosPie">
+                Todos los Derechos Reservados 2013 <span class="copyright"> &copy; </span>
+            </div>
+            {% endblock %}
+        </div>
+        
+	</div>
+{% endblock %}
+{% block javascripts %}{% endblock %}
